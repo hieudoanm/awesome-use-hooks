@@ -1,0 +1,32 @@
+{
+  "name": "awesome-use-hooks",
+  "version": "0.0.1",
+  "description": "(React) Use Hooks",
+  "main": "dist/index.js",
+  "repository": "git@github.com:hieudoanm/awesome-use-hooks.git",
+  "author": "hieudoanm <hieumdoan@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "docs": "ts-node scripts",
+    "build": "tsc",
+    "lint": "eslint . --fix --ext .ts",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/react": "^17.0.39",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint": "^8.10.0",
+    "eslint-plugin-react": "^7.29.3",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1",
+    "pretty-quick": "^3.1.3",
+    "ts-node": "^10.6.0",
+    "typescript": "^4.6.2"
+  }
+}
