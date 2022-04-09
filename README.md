@@ -1,4 +1,4 @@
-# React useHooks
+# (React) `useHooks`
 
 - [Native](#native)
 - [Hooks](#hooks)
