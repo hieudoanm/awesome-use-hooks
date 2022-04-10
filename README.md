@@ -39,11 +39,11 @@
 
 ### useAsync
 
-```ts
+```tsx
 import { useState, useCallback, useEffect } from 'react';
 
 // Hook
-export const useAsync = <T>(
+export const useAsync = <T,>(
   asyncFunction: () => Promise<T>,
   immediate = true,
 ) => {
@@ -88,7 +88,7 @@ export default useAsync;
 
 ### useCopyToClipboard
 
-```ts
+```tsx
 import { useState } from 'react';
 
 type CopiedValue = string | null;
@@ -123,11 +123,11 @@ export default useCopyToClipboard;
 
 ### useDebounce
 
-```ts
+```tsx
 import { useEffect, useState } from 'react';
 
 // Hook
-export const useDebounce = <T>(value: T, delay: number) => {
+export const useDebounce = <T,>(value: T, delay: number) => {
   // State and setters for debounced value
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
   useEffect(
@@ -153,7 +153,7 @@ export default useDebounce;
 
 ### useEffectOnce
 
-```ts
+```tsx
 import { EffectCallback, useEffect } from 'react';
 
 export const useEffectOnce = (effect: EffectCallback): void => {
@@ -165,7 +165,7 @@ export default useEffectOnce;
 
 ### useFetch
 
-```ts
+```tsx
 import { useEffect, useReducer, useRef } from 'react';
 
 interface State<T> {
@@ -181,7 +181,7 @@ type Action<T> =
   | { type: 'fetched'; payload: T }
   | { type: 'error'; payload: Error };
 
-const useFetch = <T = unknown>(
+const useFetch = <T = unknown,>(
   url?: string,
   options?: RequestInit,
 ): State<T> => {
@@ -259,7 +259,7 @@ export default useFetch;
 
 ### useHover
 
-```ts
+```tsx
 import { useEffect, useRef, useState } from 'react';
 
 export const useHover = <T extends HTMLElement>() => {
@@ -290,7 +290,7 @@ export default useHover;
 
 ### useInterval
 
-```ts
+```tsx
 import { useEffect, useRef } from 'react';
 
 export const useInterval = (callback: () => void, delay: number | null) => {
@@ -320,7 +320,7 @@ export default useInterval;
 
 ### useIsFirstRender
 
-```ts
+```tsx
 import { useRef } from 'react';
 
 export const useIsFirstRender = (): boolean => {
@@ -340,7 +340,7 @@ export default useIsFirstRender;
 
 ### useIsMounted
 
-```ts
+```tsx
 import { useCallback, useEffect, useRef } from 'react';
 
 export const useIsMounted = (): (() => boolean) => {
@@ -362,7 +362,7 @@ export default useIsMounted;
 
 ### useKeyPress
 
-```ts
+```tsx
 import { useEffect, useState } from 'react';
 
 // Hook
@@ -399,10 +399,10 @@ export default useKeyPress;
 
 ### useLocalStorage
 
-```ts
+```tsx
 import { useState } from 'react';
 
-const parseJSON = <T>(jsonString: string, fallbackValue: T) => {
+const parseJSON = <T,>(jsonString: string, fallbackValue: T) => {
   try {
     return jsonString ? JSON.parse(jsonString) : fallbackValue;
   } catch (error) {
@@ -411,7 +411,7 @@ const parseJSON = <T>(jsonString: string, fallbackValue: T) => {
   }
 };
 
-export const useLocalStorage = <T>(key: string, initialValue: T) => {
+export const useLocalStorage = <T,>(key: string, initialValue: T) => {
   // State to store our value
   // Pass initial state function to useState so logic is only executed once
   const [storedValue, setStoredValue] = useState<T>(() => {
@@ -451,7 +451,7 @@ export default useLocalStorage;
 
 ### useLockBodyScroll
 
-```ts
+```tsx
 import { useLayoutEffect } from 'react';
 
 export const useLockBodyScroll = () => {
@@ -472,7 +472,7 @@ export default useLockBodyScroll;
 
 ### useOnClickOutside
 
-```ts
+```tsx
 import { RefObject, useEffect } from 'react';
 
 // Hook
@@ -511,7 +511,7 @@ export default useOnClickOutside;
 
 ### useScript
 
-```ts
+```tsx
 import { useEffect, useState } from 'react';
 
 type ScriptStatus = 'loading' | 'idle' | 'ready' | 'error';
@@ -584,7 +584,7 @@ export default useScript;
 
 ### useTimeout
 
-```ts
+```tsx
 import { useEffect, useRef } from 'react';
 
 export const useTimeout = (callback: () => void, delay: number | null) => {
@@ -614,7 +614,7 @@ export default useTimeout;
 
 ### useToggle
 
-```ts
+```tsx
 import { useState, useCallback } from 'react';
 
 export const useToggle = (initialState = false) => {
@@ -633,7 +633,7 @@ export default useToggle;
 
 ### useUpdateEffect
 
-```ts
+```tsx
 import { DependencyList, EffectCallback, useEffect } from 'react';
 
 import { useIsFirstRender } from '../use-is-first-render';
@@ -656,7 +656,7 @@ export default useUpdateEffect;
 
 ### useWindowSize
 
-```ts
+```tsx
 import { useEffect, useState } from 'react';
 
 type WindowSize = { width?: number; height?: number };
