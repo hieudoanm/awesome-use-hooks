@@ -14,7 +14,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "react": "17.0.2"
+    "react": "18.2.0"
   },
   "devDependencies": {
     "@types/node": "17.0.21",

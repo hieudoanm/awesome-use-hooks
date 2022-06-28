@@ -1,17 +1,1 @@
-export { useAsync } from './hooks/use-async';
-export { useDebounce } from './hooks/use-debounce';
-export { useEffectOnce } from './hooks/use-effect-once';
-export { useGeolocation } from './hooks/use-geolocation';
-export { useHover } from './hooks/use-hover';
-export { useInterval } from './hooks/use-interval';
-export { useIsFirstRender } from './hooks/use-is-first-render';
-export { useIsMounted } from './hooks/use-is-mounted';
-export { useKeyPress } from './hooks/use-key-press';
-export { useLocalStorage } from './hooks/use-local-storage';
-export { useLockBodyScroll } from './hooks/use-lock-body-scroll';
-export { useOnClickOutside } from './hooks/use-on-click-outside';
-export { useScript } from './hooks/use-script';
-export { useTimeout } from './hooks/use-timeout';
-export { useToggle } from './hooks/use-toggle';
-export { useUpdateEffect } from './hooks/use-update-effect';
-export { useWindowSize } from './hooks/use-window-size';
+export * from './hooks';
