@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: node:16
+      - image: node
     working_directory: ~/awesome-use-hooks
     steps:
       - checkout
@@ -15,7 +15,7 @@ jobs:
           command: yarn build
   test:
     docker:
-      - image: node:16
+      - image: node
     working_directory: ~/awesome-use-hooks
     steps:
       - checkout
